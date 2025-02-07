@@ -62,13 +62,20 @@ section .list {
     height: 100%;
     margin: auto;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 section .list .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* Espaço entre a imagem e o conteúdo */
+    opacity: 0;
+    transition: opacity 0.5s ease;
     position: absolute;
     inset: 0;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 section .list .item.active {
@@ -76,30 +83,27 @@ section .list .item.active {
 }
 
 section .list .item .car-img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 70%;
-    max-width: 600px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 section .list .item .car-img img {
     width: 100%;
+    max-width: 600px;
     transform: rotate(-20deg);
     transition: transform 0.5s ease;
 }
 
 section .list .item .content {
-    position: absolute;
-    right: 20px;
-    width: 50%;
-    height: 100%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     gap: 20px;
-    text-align: right;
+    text-align: left;
 }
 
 section .list .item .content .car-information {
@@ -209,6 +213,16 @@ section .indicators ul li.active {
         gap: 10px;
     }
 
+    section .list .item {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    section .list .item .content {
+        align-items: center;
+        text-align: center;
+    }
+
     section .list .item .content h2 {
         font-size: 3em;
     }
@@ -259,15 +273,8 @@ section .indicators ul li.active {
         display: flex;
     }
 
-    section .list .item .car-img {
-        width: 90%;
-    }
-
-    section .list .item .content {
-        right: 10px;
-        width: 90%;
-        align-items: center;
-        text-align: center;
+    section .list .item .car-img img {
+        max-width: 90%;
     }
 
     section .list .item .content h2 {
