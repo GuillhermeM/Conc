@@ -316,7 +316,7 @@ section .list .item.active .content .information {
 
     section .list .item {
         flex-direction: column;
-        gap: 5px; /* Espaçamento menor entre a imagem e o texto */
+        gap: 1px; /* Espaçamento menor entre a imagem e o texto */
         align-items: center;
         text-align: center;
     }
@@ -324,13 +324,13 @@ section .list .item.active .content .information {
     section .list .item .car-img img {
         max-width: 80%; /* Reduz o tamanho da imagem */
         transform: rotate(-10deg); /* Ajusta a rotação */
-        margin-top: 5px; /* Imagem mais próxima do texto */
+        margin-top: 1px; /* Imagem mais próxima do texto */
     }
 
     section .list .item .content {
         align-items: center;
         text-align: center;
-        margin-top: -40px; /* Texto mais próximo da imagem */
+        margin-top: -40px; /* Ajusta o espaçamento */
     }
 
     section .list .item .content h2 {
