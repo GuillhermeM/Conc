@@ -6,101 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <title>Concencionaria</title>
+    <title>Concessionária</title>
 </head>
 
 <body>
     <header>
         <img src="./img/logo.png" alt="logo fp">
         <nav>
-            <ul>
-                <li>Home</li>
-                <li>Carros</li>
-                <li>Fale Conosco</li>
+            <button id="menu-toggle">☰</button>
+            <ul id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#carros">Carros</a></li>
+                <li><a href="#fale-conosco">Fale Conosco</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="container">
         <div class="list">
-
             <div class="item active">
                 <div class="car-img">
-                    <img src="./img/1.png" alt="imagem carro">
+                    <img src="./img/1.png" alt="Porsche 911 Turbo">
                 </div>
                 <div class="content">
-                    <p class="car-information">
-                        Único Dono
-                    </p>
-                    <h2>
-                        911 Turbo
-                    </h2>
+                    <p class="car-information">Único Dono</p>
+                    <h2>911 Turbo</h2>
                     <p class="description">
                         O Porsche 911 Turbo é um ícone de desempenho e luxo. 
                         Com design marcante e motor potente, oferece uma condução emocionante e precisa. 
                         Tecnologia avançada e interiores sofisticados completam a experiência, ideal para quem busca excelência automotiva.
                     </p>
-                    <button class="information">
-                        Saiba Mais
-                    </button>
+                    <button class="information">Saiba Mais</button>
                 </div>
             </div>
 
             <div class="item">
                 <div class="car-img">
-                    <img src="./img/2.png" alt="imagem carro">
+                    <img src="./img/2.png" alt="Ferrari Conversível">
                 </div>
                 <div class="content">
-                    <p class="car-information">
-                        Conversível
-                    </p>
-                    <h2>
-                        Ferrari
-                    </h2>
+                    <p class="car-information">Conversível</p>
+                    <h2>Ferrari</h2>
                     <p class="description">
                         Descubra a liberdade de dirigir ao ar livre com o Conversível Terral. 
                         Combinando design elegante e desempenho excepcional, este veículo oferece uma experiência de condução única. 
                         Perfeito para quem busca aventura e sofisticação, o Terral é a escolha ideal para aproveitar cada momento na estrada com estilo e conforto.
                     </p>
-                    <button class="information">
-                        Saiba Mais
-                    </button>
+                    <button class="information">Saiba Mais</button>
                 </div>
             </div>
 
             <div class="item">
                 <div class="car-img">
-                    <img src="./img/3.png" alt="imagem carro">
+                    <img src="./img/3.png" alt="Lamborghini 2015">
                 </div>
                 <div class="content">
-                    <p class="car-information">
-                        2015
-                    </p>
-                    <h2>
-                        Lamborghini
-                    </h2>
+                    <p class="car-information">2015</p>
+                    <h2>Lamborghini</h2>
                     <p class="description">
                         O Lamborghini 2015 combina design agressivo, potência incrível e tecnologia avançada. 
                         Com um motor de alto desempenho e interior luxuoso, oferece uma experiência de condução emocionante e exclusiva. 
                         Ideal para quem busca adrenalina e sofisticação.
                     </p>
-                    <button class="information">
-                        Saiba Mais
-                    </button>
+                    <button class="information">Saiba Mais</button>
                 </div>
             </div>
         </div>
-
 
         <div class="arrows">
             <button id="prev"><img src="./img/arrow.svg" alt="seta esquerda"></button>
