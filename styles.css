@@ -324,7 +324,7 @@ section .list .item.active .content .information {
     section .list .item .car-img img {
         max-width: 80%; /* Reduz o tamanho da imagem */
         transform: rotate(-10deg); /* Ajusta a rotação */
-        margin-top: 20px; /* Espaço acima do texto */
+        margin-top: 40px; /* Espaço acima do texto */
     }
 
     section .list .item .content {
