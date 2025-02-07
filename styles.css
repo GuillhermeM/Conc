@@ -71,7 +71,7 @@ section .list .item {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px; /* Espaço entre a imagem e o conteúdo */
+    gap: 50px;
     opacity: 0;
     transition: opacity 0.5s ease;
     position: absolute;
@@ -203,6 +203,47 @@ section .indicators ul li.active {
     background-color: #fff;
 }
 
+/* Animação para o carro */
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%) rotate(-20deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) rotate(-20deg);
+        opacity: 1;
+    }
+}
+
+/* Animação para o nome do carro */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicando as animações */
+section .list .item.active .car-img img {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+section .list .item.active .content h2 {
+    animation: fadeIn 1s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+section .list .item.active .content .car-information,
+section .list .item.active .content .description,
+section .list .item.active .content .information {
+    animation: fadeIn 1s ease-out 1s forwards;
+    opacity: 0;
+}
+
 /* Responsividade para tablets */
 @media (max-width: 768px) {
     header img {
@@ -273,8 +314,23 @@ section .indicators ul li.active {
         display: flex;
     }
 
+    section .list .item {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
     section .list .item .car-img img {
-        max-width: 90%;
+        max-width: 80%; /* Reduz o tamanho da imagem */
+        transform: rotate(-10deg); /* Ajusta a rotação */
+        margin-top: 20px; /* Espaço acima do texto */
+    }
+
+    section .list .item .content {
+        align-items: center;
+        text-align: center;
+        margin-top: -50px; /* Ajusta a posição do texto */
     }
 
     section .list .item .content h2 {
