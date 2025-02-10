@@ -316,7 +316,7 @@ section .list .item.active .content .information {
 
     section .list .item {
         flex-direction: column;
-        gap: 10px; /* Aumente o espaçamento entre a imagem e o texto */
+        gap: -10px; /* Aumente o espaçamento entre a imagem e o texto */
         align-items: center;
         text-align: center;
     }
