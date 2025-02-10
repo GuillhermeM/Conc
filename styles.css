@@ -286,6 +286,7 @@ section .list .item.active .content .information {
     header {
         flex-direction: column;
         gap: 10px;
+        padding: 10px;
     }
 
     header img {
@@ -315,31 +316,31 @@ section .list .item.active .content .information {
 
     section .list .item {
         flex-direction: column;
-        gap: 0; /* Removido o espaçamento entre a imagem e o texto */
+        gap: 20px; /* Aumente o espaçamento entre a imagem e o texto */
         align-items: center;
         text-align: center;
     }
 
     section .list .item .car-img img {
-        max-width: 90%; /* Aumente o tamanho da imagem */
+        max-width: 80%; /* Reduza o tamanho da imagem */
         transform: rotate(-10deg); /* Mantenha a rotação */
-        margin-top: 0; /* Removido o espaçamento superior */
+        margin-top: 20px; /* Adicione espaçamento superior */
     }
 
     section .list .item .content {
         align-items: center;
         text-align: center;
-        margin-top: -30px; /* Ajuste o espaçamento superior para trazer o texto para cima */
+        margin-top: 0; /* Remova o ajuste negativo */
     }
 
     section .list .item .content h2 {
-        font-size: 1.8em; /* Reduza o tamanho da fonte */
-        margin-top: 0; /* Removido o espaçamento superior */
+        font-size: 2em; /* Ajuste o tamanho da fonte */
+        margin-top: 10px; /* Adicione espaçamento superior */
     }
 
     section .list .item .content .description {
-        font-size: 14px; /* Aumente o tamanho da fonte */
-        margin-top: 0; /* Removido o espaçamento superior */
+        font-size: 14px; /* Ajuste o tamanho da fonte */
+        margin-top: 10px; /* Adicione espaçamento superior */
     }
 
     section .arrows button {
