@@ -245,43 +245,6 @@ section .list .item.active .content .information {
 }
 
 /* Responsividade para tablets */
-@media (max-width: 768px) {
-    header img {
-        width: 120px;
-    }
-
-    header nav ul {
-        gap: 10px;
-    }
-
-    section .list .item {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    section .list .item .content {
-        align-items: center;
-        text-align: center;
-    }
-
-    section .list .item .content h2 {
-        font-size: 3em;
-    }
-
-    section .list .item .content .description {
-        font-size: 12px;
-    }
-
-    section .arrows button {
-        width: 35px;
-        height: 35px;
-    }
-
-    section .arrows button img {
-        width: 18px;
-    }
-}
-
 @media (max-width: 480px) {
     header {
         flex-direction: column;
@@ -329,7 +292,7 @@ section .list .item.active .content .information {
     section .list .item .content {
         align-items: center;
         text-align: center;
-        margin-top: -30px; /* Ajuste o espaçamento superior para trazer o texto para cima */
+        margin-top: -20px; /* Ajuste o espaçamento superior para trazer o texto para cima */
     }
 
     section .list .item .content h2 {
