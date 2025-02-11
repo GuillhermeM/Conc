@@ -1,3 +1,4 @@
+/* Reset básico e configurações globais */
 * {
     margin: 0;
     padding: 0;
@@ -6,26 +7,31 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Estilos do corpo da página */
 body {
-    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: radial-gradient(#470964, #791fd3);
     color: #fff;
     font-size: 16px;
 }
 
+/* Estilos do cabeçalho */
 header {
-    position: fixed;
-    width: 90vw;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    z-index: 2;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
 }
 
 header img {
-    width: 150px;
+    width: 120px;
 }
 
 header nav ul {
@@ -37,6 +43,11 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #beff1b;
 }
 
 #menu-toggle {
@@ -48,10 +59,10 @@ header nav ul li a {
     cursor: pointer;
 }
 
+/* Estilos da seção principal */
 section {
-    background-image: radial-gradient(#470964, #791fd3);
-    height: 100vh;
     position: relative;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,12 +70,8 @@ section {
 
 section .list {
     width: 90vw;
-    height: 100%;
+    max-width: 1200px;
     margin: auto;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 section .list .item {
@@ -82,13 +89,6 @@ section .list .item.active {
     opacity: 1;
 }
 
-section .list .item .car-img {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 section .list .item .car-img img {
     width: 100%;
     max-width: 600px;
@@ -97,17 +97,10 @@ section .list .item .car-img img {
 }
 
 section .list .item .content {
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     gap: 20px;
     text-align: left;
-}
-
-section .list .item .content .car-information {
-    font-weight: bold;
 }
 
 section .list .item .content h2 {
@@ -133,8 +126,14 @@ section .list .item .content .information {
     cursor: pointer;
     font-weight: bold;
     font-family: "League Gothic", sans-serif;
+    transition: background-color 0.3s ease;
 }
 
+section .list .item .content .information:hover {
+    background-color: #a3d816;
+}
+
+/* Estilos dos botões de navegação */
 section .arrows {
     width: 90vw;
     position: absolute;
@@ -168,6 +167,7 @@ section .arrows button:nth-child(1) img {
     transform: scaleX(-1);
 }
 
+/* Estilos dos indicadores */
 section .indicators {
     position: absolute;
     top: 50%;
@@ -203,7 +203,7 @@ section .indicators ul li.active {
     background-color: #fff;
 }
 
-/* Animação para o carro */
+/* Animações */
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%) rotate(-20deg);
@@ -215,7 +215,6 @@ section .indicators ul li.active {
     }
 }
 
-/* Animação para o nome do carro */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -227,7 +226,6 @@ section .indicators ul li.active {
     }
 }
 
-/* Aplicando as animações */
 section .list .item.active .car-img img {
     animation: slideInFromLeft 1s ease-out forwards;
 }
@@ -247,11 +245,7 @@ section .list .item.active .content .information {
 /* Responsividade para tablets */
 @media (max-width: 768px) {
     header img {
-        width: 120px;
-    }
-
-    header nav ul {
-        gap: 10px;
+        width: 100px;
     }
 
     section .list .item {
@@ -282,15 +276,12 @@ section .list .item.active .content .information {
     }
 }
 
+/* Responsividade para celular */
 @media (max-width: 480px) {
     header {
         flex-direction: column;
         gap: 10px;
         padding: 10px;
-    }
-
-    header img {
-        width: 100px;
     }
 
     #menu-toggle {
@@ -314,33 +305,20 @@ section .list .item.active .content .information {
         display: flex;
     }
 
-    section .list .item {
-        flex-direction: column;
-        gap: 20px; /* Aumente o espaçamento entre a imagem e o texto */
-        align-items: center;
-        text-align: center;
-    }
-
     section .list .item .car-img img {
-        max-width: 80%; /* Reduza o tamanho da imagem */
-        transform: rotate(-10deg); /* Mantenha a rotação */
-        margin-top: 20px; /* Adicione espaçamento superior */
-    }
-
-    section .list .item .content {
-        align-items: center;
-        text-align: center;
-        margin-top: 0; /* Remova o ajuste negativo */
+        max-width: 80%;
+        transform: rotate(-10deg);
+        margin-top: 20px;
     }
 
     section .list .item .content h2 {
-        font-size: 2em; /* Ajuste o tamanho da fonte */
-        margin-top: 10px; /* Adicione espaçamento superior */
+        font-size: 2em;
+        margin-top: 10px;
     }
 
     section .list .item .content .description {
-        font-size: 15px; /* Ajuste o tamanho da fonte */
-        margin-top: 10px; /* Adicione espaçamento superior */
+        font-size: 15px;
+        margin-top: 10px;
     }
 
     section .arrows button {
